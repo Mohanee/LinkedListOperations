@@ -62,6 +62,7 @@ namespace DataStructuresDemo
                 }
                 temp = temp.next;
             }
+            Console.WriteLine("\n\n");
         }
 
 
@@ -104,6 +105,25 @@ namespace DataStructuresDemo
             }
             Console.WriteLine("\nNow the head is: " + this.head.data);
         }
+
+        internal void DeleteLastElement()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("The LL is Empty");
+            }
+            else
+            {
+                Node temp = this.head;
+                while(temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
+            }
+        }
+
+        
     }
 
 }

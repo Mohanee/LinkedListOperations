@@ -18,9 +18,19 @@ namespace DataStructuresDemo
 
             Console.WriteLine("The linked List is -->");
             list.Display();
+
             list.Delete1stElement();
             Console.WriteLine("New LL after Deleting first element");
             list.Display();
+
+            list.AppendToLast(67);
+            list.AppendToLast(100);
+            list.Display();
+
+            list.DeleteLastElement(); 
+            Console.WriteLine("New LL after Deleting Last element");
+            list.Display();
+
             Console.ReadKey();
         }
     }
