@@ -35,12 +35,19 @@ namespace DataStructuresDemo
                 Console.WriteLine("LinkedList is empty");
                 return;
             }
-            while(temp!=null)
+            while (temp != null)
+            {
+                if (temp.next != null)
                 {
-                    Console.WriteLine(temp.data + " ");
-                    temp=temp.next;
+                    Console.Write(temp.data + " --> ");
                 }
-            
+                else
+                {
+                    Console.Write(temp.data + " .");
+                }
+                temp = temp.next;
+            }
         }
     }
+
 }
