@@ -31,6 +31,14 @@ namespace DataStructuresDemo
             Console.WriteLine("New LL after Deleting Last element");
             list.Display();
 
+            Console.WriteLine("Enter the element to search for: ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            int s = list.SearchForAnElement(k);
+            if(s>=1)
+            {
+                Console.WriteLine("Element is found at position " + s);
+            }
+
             Console.ReadKey();
         }
     }

@@ -123,6 +123,71 @@ namespace DataStructuresDemo
             }
         }
 
+        internal int SizeOfList()
+        {
+            int size = 0;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                Node temp = this.head;
+                while(temp.next!=null)
+                {
+                    size++;
+                    temp = temp.next;
+                }
+                return size+1;
+            }
+
+        }
+
+        internal int SearchForAnElement(int data)
+        {
+            int pos = 0;
+
+            if (this.head == null)
+            {
+                Console.WriteLine("The LL is Empty");
+                return -1;
+            }
+            else
+            {
+                Node temp = this.head;
+                bool flag = true;
+                while (flag) 
+                {
+                    pos++;
+                    if(temp.data == data)
+                    {
+                        flag = false;
+                    }
+                    else if(temp.next == null)
+                    {
+                        if(temp.data==data)
+                        {
+                            return pos;
+                        }
+                        else
+                        {
+                            flag = false;
+                        }
+                    }
+                    else
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if(pos==SizeOfList()+1)
+                {
+                    Console.WriteLine("Element not found in the list");
+                    return 0;
+                }
+                return pos;
+            }
+        }
+
         
     }
 
