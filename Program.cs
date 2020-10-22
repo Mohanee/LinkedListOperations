@@ -13,6 +13,7 @@ namespace DataStructuresDemo
             list.AddToFirst(56);
 
             list.AppendToLast(45);
+            list.InsertInBetween(30, 78);
             list.AppendToLast(35);
 
             Console.WriteLine("The linked List is -->");
@@ -21,3 +22,4 @@ namespace DataStructuresDemo
         }
     }
 }
+ 
