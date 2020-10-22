@@ -218,7 +218,36 @@ namespace DataStructuresDemo
             }
         }
 
-        
+        internal void DeleteElement(int data)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("The LL is Empty");
+            }
+            else
+            {
+                Node temp = this.head;
+                while(temp.next.next!=null)
+                {
+                    if(temp.next.data==data)
+                    {
+                        temp.next = temp.next.next;
+                    }
+                    else
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if(temp.next.next==null)
+                {
+                    if(temp.next.data==data)
+                    {
+                        temp.next = null;
+                    }
+                }
+            }
+        }
+
     }
 
 }
