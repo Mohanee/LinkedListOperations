@@ -68,25 +68,41 @@ namespace DataStructuresDemo
         internal void InsertInBetween(int data2, int data)
         {
             Node newElement = new Node(data);
-            if(this.head==null)
+            if (this.head == null)
             {
                 Console.WriteLine("The LL is Empty");
             }
-            Node temp = this.head;
-            bool flag = true;
-            while(flag)
+            else
             {
-                if (temp.data == data2)
+                Node temp = this.head;
+                bool flag = true;
+                while (flag)
                 {
-                    flag = false;
+                    if (temp.data == data2)
+                    {
+                        flag = false;
+                    }
+                    else
+                    {
+                        temp = temp.next;
+                    }
                 }
-                else
-                {
-                    temp = temp.next;
-                }
+                newElement.next = temp.next;
+                temp.next = newElement;
             }
-            newElement.next = temp.next;
-            temp.next = newElement;
+        }
+
+        internal void Delete1stElement()
+        {
+            if(this.head== null)
+            {
+                Console.WriteLine("The LL is Empty");
+            }
+            else
+            {
+                head = this.head.next;
+            }
+            Console.WriteLine("\nNow the head is: " + this.head.data);
         }
     }
 
