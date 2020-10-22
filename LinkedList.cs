@@ -7,7 +7,22 @@ namespace DataStructuresDemo
     class LinkedList
     {
         internal Node head;
-        internal void Add(int data)
+
+        internal void AddToFirst(int data)
+        {
+            Node node = new Node(data);
+            if(this.head== null)
+            {
+                this.head = node;
+            }
+            else
+            {
+                node.next = this.head;
+            }
+            this.head = node;
+        }
+
+        internal void AppendToLast(int data)
         {
             Node node = new Node(data);
             if(this.head==null)
@@ -24,7 +39,7 @@ namespace DataStructuresDemo
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into the linked list", node.data);
+            //Console.WriteLine("{0} inserted into the linked list", node.data);
         }
 
         internal void Display()
