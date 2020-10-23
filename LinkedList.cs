@@ -227,9 +227,9 @@ namespace DataStructuresDemo
             else
             {
                 Node temp = this.head;
-                while(temp.next.next!=null)
+                while (temp.next.next != null)
                 {
-                    if(temp.next.data==data)
+                    if (temp.next.data == data)
                     {
                         temp.next = temp.next.next;
                     }
@@ -238,15 +238,39 @@ namespace DataStructuresDemo
                         temp = temp.next;
                     }
                 }
-                if(temp.next.next==null)
+                if (temp.next.next == null)
                 {
-                    if(temp.next.data==data)
+                    if (temp.next.data == data)
                     {
                         temp.next = null;
                     }
                 }
             }
         }
+
+            internal void sortLL()
+            {
+                if (this.head == null)
+                {
+                    Console.WriteLine("The LL is Empty");
+                }
+                else 
+                {
+                    Node temp = this.head;
+                    while (temp.next != null)
+                    {
+                        int temp2 = 0;
+                        if (temp.data > temp.next.data)
+                        {
+                            temp2 = temp.data;
+                            temp.data = temp.next.data;
+                            temp.next.data = temp2;
+                        }
+                     temp = temp.next;
+                    }
+                }
+            }
+        
 
     }
 

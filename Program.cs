@@ -75,6 +75,11 @@ namespace DataStructuresDemo
                         }
                         break;
 
+                    case 10:
+                        list.sortLL();
+                        list.Display();
+                        break;
+
                     case 11:
                         cont = false;
                         break;
@@ -86,4 +91,4 @@ namespace DataStructuresDemo
     }
 }
 
- 
+  
