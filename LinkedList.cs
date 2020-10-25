@@ -148,8 +148,9 @@ namespace DataStructuresDemo
             return head;
         }
 
-        internal void DeleteLastElement()
+        internal int DeleteLastElement()
         {
+            int k = -1;
             if (this.head == null)
             {
                 Console.WriteLine("The LL is Empty");
@@ -161,8 +162,10 @@ namespace DataStructuresDemo
                 {
                     temp = temp.next;
                 }
+                k = temp.next.data;
                 temp.next = null;
             }
+            return k;
         }
 
         internal int SizeOfList()

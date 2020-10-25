@@ -18,7 +18,11 @@ namespace DataStructuresDemo
                 StackOperation sopr = new StackOperation();
                 sopr.PerformStackOperation();
             }
-
+            if(choice == 3)
+            {
+                QueueOperations qopr = new QueueOperations();
+                qopr.PerformQueueOperations();
+            }
         }
     }
 }
