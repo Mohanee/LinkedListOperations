@@ -25,7 +25,15 @@ namespace DataStructuresDemo
                         s.DisplayStack();
                         break;
 
-                    case 2: break;
+                    case 2:
+                        s.Peak_and_Pop_Stack();
+                        break;
+
+                    case 3:
+                        val = false;
+                        break;
+
+                    default: break;
 
                 }
             }

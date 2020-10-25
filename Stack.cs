@@ -18,5 +18,37 @@ namespace DataStructuresDemo
         {
             stackList.Display();
         }
+
+        internal void Peak_and_Pop_Stack()
+        {
+            Node temp = stackList.head;
+            if (temp.next == null)
+            {
+                Console.WriteLine("Empty List");
+            }
+            else
+            {
+                while (temp.next != null)
+                {
+                    Console.WriteLine(Peak_Element());
+                    Pop_Element();
+                    stackList.Display();
+
+                    temp = temp.next;
+                    //Console.WriteLine("");
+                }
+            }
+        }
+
+        internal int Peak_Element()
+        {
+            int k = stackList.Return_Head();
+            return k;
+        }
+
+        internal void Pop_Element()
+        {
+            stackList.Delete1stElement();
+        }
     }
 }

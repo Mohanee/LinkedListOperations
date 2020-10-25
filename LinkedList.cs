@@ -132,7 +132,20 @@ namespace DataStructuresDemo
             {
                 head = this.head.next;
             }
-            Console.WriteLine("\nNow the head is: " + this.head.data);
+        }
+
+        internal int Return_Head()
+        {
+            int head = -1;
+            if (this.head == null)
+            {
+                Console.WriteLine("The LL is Empty");
+            }
+            else
+            {
+                head = this.head.data;
+            }
+            return head;
         }
 
         internal void DeleteLastElement()
